@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
-public class PlayerSFX : MonoBehaviour
+public class EffectPlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
 
