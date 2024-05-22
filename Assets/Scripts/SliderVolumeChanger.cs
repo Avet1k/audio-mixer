@@ -10,6 +10,7 @@ public class SliderVolumeChanger : MonoBehaviour
     [SerializeField] private string _exposedParameterName;
 
     private Slider _slider;
+    private int _maxVolumeDb = 20;
 
     private void Awake()
     {
@@ -28,6 +29,6 @@ public class SliderVolumeChanger : MonoBehaviour
 
     private void ChangeVolume(float volume)
     {
-        _mixer.audioMixer.SetFloat(_exposedParameterName, Mathf.Log10(volume) * 20);
+        _mixer.audioMixer.SetFloat(_exposedParameterName, Mathf.Log10(volume) * _maxVolumeDb);
     }
 }
